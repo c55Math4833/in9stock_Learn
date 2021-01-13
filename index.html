@@ -10,8 +10,33 @@
 </head>
 
 <body>
-  ###股票學習日記2021.01.13  
-  美股關於IT設備的資料蒐集
+
+  <h1>股票學習日記2021.01.13</h1>
+  <div id="a1">
+    <ol>
+      <li v-for="todo in todos">
+        {{ todo.text }}
+      </li></ol>
+  </div>
+
+
+
   
 </body>
 </html>
+<script>
+  var app4 = new Vue({
+  el: 'a1',
+  data: {
+    todos: [
+      { text: 'IT設備相關美股:' },
+      { text: 'CSCO' },
+      { text: 'FEYE' },
+      { text: 'FTNT' },
+      { text: 'CHKP' },
+      { text: 'JNPR' },
+      { text: 'FFIV' }
+    ]
+  }
+})
+</script>
