@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Vue 測試3.0</title><!--標題-->
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script> <!--安裝Vue框架-->
+  <meta charset="utf-8"><!--指定為utf-8編碼-->
+  <meta name="author" content="c55Math"><!--作者-->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><!--MathJax腳本-->
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script><!--MathJax腳本-->
+</head>
+
+<body>
+  <div id="app"><!--<區塊 呼叫代號app物件 顯示當中message數據-->
+    {{ message }}
+  </div>
+<p>\[x = {-b \pm \sqrt{b^2-4ac} \over 2a}.\]</p><!--MathJax腳本測試-->
+  <script> 
+    var app = new Vue({
+      el: '#app',
+      data: {
+        message: 'Vue 測試3.0'
+      }
+    })
+  </script><!--建立腳本add-->
+<script type="text/javascript">
+  function to2bits(flt) {
+    if (parseFloat(flt) == flt) {
+      
+        return Math.round(flt * 100) / 100;
+    }
+    else
+        flt = flt || 0;
+        return 0;
+}
+</script>
+
+
+
+  <form oninput="ProductA.value=to2bits(parseInt(a.value)*parseInt(b.value)*0.35);ProductB.value=to2bits(parseInt(c.value)*parseInt(d.value)*0.55);totle.value=to2bits(parseInt(a.value)*parseInt(b.value)*0.35)+to2bits(parseInt(c.value)*parseInt(d.value)*0.55)" >
+    <p>A產品(350W):</p>
+    <input type="text" id="a" placeholder="數量(組)" pattern="^[0-9]*$" /> 
+    <input type="text" id="b" placeholder="每月使用時間(小時)" pattern="^[0-9]*$" /> 
+    每月消耗度數:
+    <output type="text" name="ProductA"></output>
+    <p>B產品(550W):</p>
+    <input type="text" id="c" placeholder="數量(組)" pattern="^[0-9]*$" /> 
+    <input type="text" id="d" placeholder="每月使用時間(小時)" pattern="^[0-9]*$" /> 
+    每月消耗度數:
+    <output type="text" name="ProductB"></output>
+    <p>總使用度數:</p>
+    <output type="text" name="totle"></output>
+  </form>
+
+  
+
+</body>
+</html>
