@@ -472,3 +472,8 @@ $$\left\{\begin{aligned}
 &\\ 
 &
 \end{aligned}\right.$$
+
+
+```math
+SE = \frac{\sigma}{\sqrt{n}}
+```
